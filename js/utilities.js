@@ -1,6 +1,9 @@
 function getInputFieldValueById(id) {
-    let inputValue = document.getElementById(id).value;
-    inputValue = parseInt(inputValue);
+    let inputValue = document.getElementById(id).value.trim();
+    inputValue = Number(inputValue);
+    if(isNaN(inputValue)){
+        return null;
+    }
     return inputValue;
 }
 
